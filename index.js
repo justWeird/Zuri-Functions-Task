@@ -5,22 +5,20 @@ let successMsg = "Congratulations! You guessed right. Proceed to the next stage"
 let failMsg = "Uh oh! You guessed wrong. Try again from Stage 1"
 let finalScore;
 //using arrow function
-const GUESS_FUNCTION = () => {
+const GUESS_FUNCTION = (stageVal) => {
 
   let success = true; //this checks if the user guesses right or wrong
   let stage = 1;
   //stage initialization
-  let score = 0;
-  let stageVal = 2; //this is the default value (1 and 2) i.e stage one
-  
+  let score = 0;  
 
   do {
     const stageMsg = "This is stage " + stage;
     //AI randomly generated number. The range of value is between 1 and 2 meaning the minimum value is 1. 
     let minValue = 1;
     let randValue = Math.floor(Math.random() * (stageVal - minValue + 1)) + minValue; //This complex function generates a random number between a range - setting 1 as the minimum and stageVal as the maximum
-    console.log("\n");
-    console.log("Guess value is " + randValue)
+    console.log(stageMsg);
+    
   //user input
   let userInput = Number(prompt('Make your guess: '));
 
@@ -46,4 +44,4 @@ const GUESS_FUNCTION = () => {
 
 console.log("Welcome to this Simple Guessing Game!\nThe game begins at stage 1 where you have to guess the number - 1 or 2. \n\nWith each new stage, the range of guess increases by one i.e stage 10 wil involve you guessing between 1 and 11.\n\nMay Lady luck be on your side.\n")
 //function call
-console.log(GUESS_FUNCTION());
+console.log(GUESS_FUNCTION(2));
