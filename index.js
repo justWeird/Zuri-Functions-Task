@@ -1,4 +1,4 @@
-//Welcome t o this simple number guessing game. The stage starts with guessing between 1 and 2. As the stages increase, the range of values increases by one. 
+//Welcome to this simple number guessing game. The stage starts with guessing between 1 and 2. As the stages increase, the range of values increases by one. 
 
 //Program begin
 let successMsg = "Congratulations! You guessed right. Proceed to the next stage";
