@@ -20,7 +20,7 @@ const GUESS_FUNCTION = (stageVal) => {
     console.log(stageMsg);
     
   //user input
-  let userInput = Number(prompt('Make your guess: '));
+  let userInput = Number(prompt('Make your guess: ')); //The Number function ensures that the user's input is converted to a number.
 
   if (typeof userInput != 'number'){
     console.log("Please enter a value that is of number type only i.e 1,2 etc. 'One' or 'Two' is not recognised")
@@ -45,3 +45,43 @@ const GUESS_FUNCTION = (stageVal) => {
 console.log("Welcome to this Simple Guessing Game!\nThe game begins at stage 1 where you have to guess the number - 1 or 2. \n\nWith each new stage, the range of guess increases by one i.e stage 10 wil involve you guessing between 1 and 11.\n\nMay Lady luck be on your side.\n")
 //function call
 console.log(GUESS_FUNCTION(2));
+
+
+/*
+Another Approach
+
+//function definition
+const RAND_FUNCTION = (stageVal) => {
+
+  let minValue = 1;
+  let randValue = Math.floor(Math.random() * (stageVal - minValue + 1)) + minValue;
+
+return randValue;
+}
+
+//function definition end
+
+
+console.log("Welcome to this Simple Guessing Game!\nThe game begins at stage 1 where you have to guess the number - 1 or 2. \n\nWith each new stage, the range of guess increases by one i.e stage 10 wil involve you guessing between 1 and 11.\n\nMay Lady luck be on your side.\n")
+
+let stage = 1;
+let stageVal = 2;
+let success = true;
+
+do {
+const RAND_VALUE = RAND_FUNCTION(stageVal);
+console.log("This is stage " + stage);
+let userGuess = Number(prompt()"Make your guess: ");
+if (typeof (userGuess) != 'number'){
+console.log("Please enter a value that is a number e.g 1,2. Values such as 'one, two' are not recognised")
+} else if (userguess == RAND_VALUE){
+console.log(successMsg);
+stage++
+stageVal++
+} else {
+success = false;
+}
+
+} while (success)
+
+*/
