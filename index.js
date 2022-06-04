@@ -46,9 +46,11 @@ console.log("Welcome to this Simple Guessing Game!\nThe game begins at stage 1 w
 //function call
 console.log(GUESS_FUNCTION(2));
 
+//Program ends
+
 
 /*
-Another Approach
+Another Approach - Just for a different view
 
 //function definition
 const RAND_FUNCTION = (stageVal) => {
@@ -65,6 +67,7 @@ return randValue;
 console.log("Welcome to this Simple Guessing Game!\nThe game begins at stage 1 where you have to guess the number - 1 or 2. \n\nWith each new stage, the range of guess increases by one i.e stage 10 wil involve you guessing between 1 and 11.\n\nMay Lady luck be on your side.\n")
 
 let stage = 1;
+let score = 0;
 let stageVal = 2;
 let success = true;
 
@@ -78,7 +81,10 @@ console.log("Please enter a value that is a number e.g 1,2. Values such as 'one,
 console.log(successMsg);
 stage++
 stageVal++
+score++
 } else {
+console.log(failMsg);
+console.log("Your score is " + score);
 success = false;
 }
 
