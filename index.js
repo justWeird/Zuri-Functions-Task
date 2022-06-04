@@ -19,7 +19,7 @@ const GUESS_FUNCTION = () => {
     //AI randomly generated number. The range of value is between 1 and 2 meaning the minimum value is 1. 
     let minValue = 1;
     let randValue = Math.floor(Math.random() * (stageVal - minValue + 1)) + minValue; //This complex function generates a random number between a range - setting 1 as the minimum and stageVal as the maximum
-    console.log(stageMsg);
+    console.log("\n");
     console.log("Guess value is " + randValue)
   //user input
   let userInput = Number(prompt('Make your guess: '));
